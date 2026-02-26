@@ -1,0 +1,51 @@
+.back-btn{
+    padding:5px 10px 5px 10px;
+    color: black;
+    background-color:blanchedalmond;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+.block-btn{
+    background-color: grey;
+    pointer-events: none; 
+}
+.back-btn-activate{
+    padding:5px;
+    color: white;
+    background-color:green;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
+.get-movies-btn{
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(69 175 234);
+    cursor: pointer;
+}
+
+.btn-disable{
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    color: black;
+    background-color: grey;
+    cursor: not-allowed;
+    margin-bottom: 10px;
+}
+
+.load-btn{
+    font-size: 15px;
+}
+.not-started{
+    background-color:#80a73d;
+    padding:5px;
+    border-radius: 5px;
+}
+.err-class{
+    color: red;
+    font-size:medium;
+}

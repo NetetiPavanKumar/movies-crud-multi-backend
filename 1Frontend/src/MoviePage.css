@@ -1,0 +1,65 @@
+.movies-box{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    border:3px rgb(120,0,150) dashed;
+    border-radius: 10px;
+    background-color: #f1e2e2;
+    padding:10px;
+}
+.movie-box{
+    border:2px rgb(100,250,100) dotted;
+    border-radius: 10px;
+    padding:5px;
+    margin:2px;
+    background-color: aliceblue;
+    position: relative;
+    text-align: left;
+}
+.add-movie-btn{
+    padding:5px;
+    color:#eddfdf;
+    background-color: black;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.delete-btn{
+    position:absolute;
+    bottom: 5px;
+    right: 5px;
+    color:#eddfdf;
+    background-color: #a80018;
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    cursor: pointer;
+}
+.edit-btn{
+    position:absolute;
+    bottom:5px;
+    right:65px;
+    color:white;
+    background-color: #008d00;
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    cursor:pointer;
+
+}
+
+.change-back-btn{
+    padding:5px;
+    color:black;
+    background-color: #d7d2d2;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.dot {
+    background-color: #2ecc71;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 200ms infinite;
+}

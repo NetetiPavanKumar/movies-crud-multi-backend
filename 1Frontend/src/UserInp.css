@@ -1,0 +1,18 @@
+.inp-box{
+    display: block;
+    font-size:18px;
+    border: 2px black solid;
+    border-radius: 10px;
+    padding:5px;
+    margin:2px;
+
+}
+.user-inp{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border:3px rgb(120,0,150) dashed;
+    border-radius: 10px;
+    padding:30px;
+    background-color: beige;
+}
