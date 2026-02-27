@@ -26,7 +26,8 @@ export default function MoviePage({loadMovies,savetoStorage,movies,setMovieName,
         try{
         const port=backendarr[0];
         console.log(port)
-        await axios.delete(`http://localhost:${port}/movies/${m_id}`);
+        //await axios.delete(`http://localhost:${port}/movies/${m_id}`);
+        await axios.delete(`${port}/movies/${m_id}`);
         await loadMovies();
         }
         catch(err){
@@ -38,9 +39,9 @@ export default function MoviePage({loadMovies,savetoStorage,movies,setMovieName,
     <>
         <h2 className="dot">
             You are connected to {
-                backendarr[0] === 8000 ? "Node.js + FS Database" : 
-                backendarr[0] === 3001 ? "Express.js + FS Database" : 
-                backendarr[0] === 3003 ? "Express.js + MongoDB" : 
+                backendarr[0] === "https://movies-crud-multi-backend-node-fs.onrender.com" ? "Node.js + FS Database" : 
+                backendarr[0] === "https://movies-crud-multi-backend-express-fs.onrender.com" ? "Express.js + FS Database" : 
+                backendarr[0] === "https://movies-crud-multi-backend-express-mdb.onrender.com" ? "Express.js + MongoDB" : 
                 "Unknown Backend"
             }
         </h2>

@@ -11,10 +11,11 @@ export default function App(){
     const [releaseYear,setReleaseYear]=useState('');
     const [budget,setBudget] = useState('');
     const [collections,setCollections]=useState('');
-    const [backend,setBackend]=useState([0]);
+    //const [backend,setBackend]=useState([0]);
     const [conn,setConn]=useState(false)
+    const [backendarr, setBackend] = useState([localStorage.getItem("back") ? JSON.parse(localStorage.getItem("back"))[0] : ""]);
 
-    let backendarr=JSON.parse(localStorage.getItem('back')) || backend;
+    //let backendarr=JSON.parse(localStorage.getItem('back')) || backend;
 
     console.log(backendarr);
 
@@ -44,7 +45,8 @@ export default function App(){
 
         try{
         const port=backendarr[0];
-        const response=await axios.get(`http://localhost:${port}/movies`);
+        //const response=await axios.get(`http://localhost:${port}/movies`);
+        const response=await axios.get(`${port}/movies`);
         setMovies(response.data);
         return true;
         }
@@ -93,7 +95,14 @@ export default function App(){
 
         try{
         const port=backendarr[0];
-        await axios.post(`http://localhost:${port}/movies`,{
+        // await axios.post(`http://localhost:${port}/movies`,{
+        //     _id:crypto.randomUUID(),
+        //     mname:moviename,
+        //     r_year:releaseYear,
+        //     bud:budget,
+        //     collection:collections
+        // })
+        await axios.post(`${port}/movies`,{
             _id:crypto.randomUUID(),
             mname:moviename,
             r_year:releaseYear,
@@ -138,12 +147,20 @@ export default function App(){
 
         try{
             const port=backendarr[0];
-            await axios.put(`http://localhost:${port}/movies/${mid}`,{
+            // await axios.put(`http://localhost:${port}/movies/${mid}`,{
+            //     mname:moviename,
+            //     r_year:releaseYear,
+            //     bud:budget,
+            //     collection:collections
+            // });
+
+            await axios.put(`${port}/movies/${mid}`,{
                 mname:moviename,
                 r_year:releaseYear,
                 bud:budget,
                 collection:collections
             });
+
             await loadMovies();
         }
         catch(err){
@@ -165,7 +182,7 @@ return(
     <>
     <BrowserRouter>
         <Routes>
-            <Route path="/" element = {<HomePage conn={conn} setConn={setConn} backend={backend} setBackend={setBackend}/>}></Route>
+            <Route path="/" element = {<HomePage conn={conn} setConn={setConn} setBackend={setBackend}/>}></Route>
             <Route path="/movies" element={<MoviePage backendar={backendarr} loadMovies={loadMovies} savetoStorage={savetoStorage} setMovies={setMovies} setMovieName={setMovieName} setBudget={setBudget} setCollections={setCollections} setReleaseYear={setReleaseYear} movies={movies} moviename={moviename} releaseYear={releaseYear} budget={budget} collections={collections} />}></Route>
             <Route path={`editmovie/:id`} element={<EditMovie updateMovie={updateMovie} savetoStorage={savetoStorage} setMovies={setMovies} setMovieName={setMovieName} setBudget={setBudget} setCollections={setCollections} setReleaseYear={setReleaseYear} movies={movies} moviename={moviename} releaseYear={releaseYear} budget={budget} collections={collections} />}></Route>
         </Routes>
