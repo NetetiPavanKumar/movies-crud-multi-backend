@@ -7,6 +7,12 @@ The primary goal of this project is to strengthen backend fundamentals by buildi
 
 ---
 
+## ⚙️ Live Demo
+
+- **Project Link (React Frontend + Backend CRUD APIs)**:[https://movies-crud-multi-backends-frontend-react.onrender.com](https://movies-crud-multi-backends-frontend-react.onrender.com)
+
+---
+
 ## 🏗 Backend Architectures Used
 
 1. **Node.js + HTTP + File System**
@@ -67,12 +73,6 @@ The frontend remains unchanged regardless of the backend used, ensuring a consis
 - Schema design and data validation
 - Async/Await and error handling
 - Designing scalable backend projects
-
----
-
-## ⚙️ Live Demo
-
-- **Project Link (React Frontend + Backend CRUD APIs)**:[https://movies-crud-multi-backends-frontend-react.onrender.com](https://movies-crud-multi-backends-frontend-react.onrender.com)
 
 ---
 
