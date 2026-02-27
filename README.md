@@ -119,6 +119,15 @@ Open a new terminal for each backend.
 
     2.3 Express.js + MongoDB
 
+    Create a .env file inside 4ExpressJS-MongoDB/:
+    
+    ```env
+    PORT=3003
+    ATLAS_CONN_STR=your_mongodb_connection_string
+    ```
+    
+    Then start the server:
+    
     ```bash
     cd ./4ExpressJS-MongoDB/
     npm start
