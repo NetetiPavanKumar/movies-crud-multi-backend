@@ -17,6 +17,20 @@ Each backend runs independently and can be switched by **starting the desired se
 
 ---
 
+## 🖥 Frontend (React)
+
+A simple **React-based frontend** is included to consume and test all backend APIs.
+
+**Frontend Responsibilities:**
+- Select backend environment
+- Fetch movies from the active backend
+- Add, update, and delete movies
+- Demonstrate backend switching in real time
+
+The frontend remains unchanged regardless of the backend used, ensuring a consistent API contract.
+
+---
+
 ## 🔀 Backend Switching (How It Works)
 
 - All backends expose the same API endpoints:
@@ -58,7 +72,7 @@ Each backend runs independently and can be switched by **starting the desired se
 
 ## 🗂 Project Structure
 
-
+```text
 Movies_Project/
 │
 ├── 1Frontend/                  # API consumer
@@ -70,7 +84,7 @@ Movies_Project/
 ├── 4ExpressJS-MongoDB/         # Express.js + MongoDB
 │
 └── README.md
-
+```
 
 
 ---
